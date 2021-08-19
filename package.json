@@ -1,0 +1,23 @@
+{
+  "name": "marketplace_refinery",
+  "version": "1.0.0",
+  "description": "Tool to quickly convert views and explores from legacy blocks to use refinement syntax",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest test.js",
+    "debug": "node --inspect node_modules/.bin/jest ~/marketplace_refinery/test"
+  },
+  "author": "TJ Banghart",
+  "license": "ISC",
+  "dependencies": {
+    "clone-deep": "^4.0.1",
+    "glob": "^7.1.7",
+    "lookml-parser": "^6.3.0",
+    "os": "^0.1.2",
+    "pegjs": "^0.10.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2"
+  }
+}
