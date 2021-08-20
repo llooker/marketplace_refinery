@@ -78,7 +78,6 @@ function transformIncludes(parsedIncludes, collector) {
 
 function transformObjects(parsed) {
   const toReturn = {};
-  let idx = 0;
   for (let obj in parsed) {
     obj = parsed[obj];
     let name = obj.$name;
@@ -120,7 +119,6 @@ function transformObjects(parsed) {
       });
       // If the core or content layer had extends other than _config we need to make sure that they get merged
       if(cleanedExtends.length > 0) {
-        debugger;
         let mergedExtends = cleanedExtends.map((_, i) => {
           if(i == 0) {
             return [String(i), []]
@@ -137,7 +135,6 @@ function transformObjects(parsed) {
     } else {
       toReturn[name] = Object.assign({}, parsed[name]);
     }
-    ++idx;
   }
   return toReturn;
 }
